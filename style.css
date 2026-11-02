@@ -1,0 +1,175 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E BOX MODEL
+   ========================================================================== */
+* {
+    box-sizing: border-box; /* Inclui padding e border nas dimensões totais */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Requisito 3: Família de fontes */
+    color: #333333; /* Requisito 3: Cor do texto geral */
+    background-color: #f4f6f9;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto; /* Espaçamento externo centralizado */
+    padding: 0 20px;   /* Espaçamento interno lateral */
+}
+
+/* ==========================================================================
+   CABEÇALHO, TÍTULOS E NAVEGAÇÃO
+   ========================================================================== */
+header {
+    background-color: #004d40; /* Requisito 2: Cor de fundo do cabeçalho */
+    color: #ffffff;            /* Requisito 2: Cor de texto do cabeçalho */
+    padding: 30px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #004d40; /* Requisito 2: Personalização dos subtítulos */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #004d40;
+    padding-bottom: 5px;
+}
+
+/* Requisito 7: Links de navegação e pseudoclasse :hover */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #80cbc4; /* Muda a cor quando o mouse passa por cima */
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   CONTEÚDO, TEXTOS E IMAGENS
+   ========================================================================== */
+p {
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Requisito 3: Seletor de classe específico para destaque */
+.destaque {
+    background-color: #e0f2f1;
+    padding: 10px;
+    border-left: 5px solid #004d40;
+    font-style: italic;
+}
+
+/* Requisito 4: Dimensionamento e borda personalizada da imagem */
+.foto-pessoal {
+    width: 200px;         /* Define a largura fixa */
+    height: 200px;        /* Define a altura fixa */
+    object-fit: cover;    /* Mantém a proporção do rosto na foto */
+    border: 3px solid #004d40; /* Aplica borda customizada */
+    border-radius: 50%;   /* Transforma a imagem em um círculo perfeito */
+    display: block;
+    margin: 0 auto 20px auto; /* Centraliza a foto */
+}
+
+/* Requisito 6: Diferenciação visual de uma seção da página */
+.perfil-section, .interesses-section, .formulario-section {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ==========================================================================
+   FORMULÁRIO DE CONTATO
+   ========================================================================== */
+/* Requisito 5: Personalização dos campos e agrupamento */
+.campo-grupo {
+    margin-bottom: 15px;
+}
+
+.campo-grupo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Requisito 5: Estilização de inputs e textareas usando padding, border e margin */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #004d40;
+    outline: none;
+}
+
+/* Estilização dos Botões */
+button {
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #00796b;
+}
+
+.btn-limpar {
+    background-color: #cfd8dc;
+    color: #37474f;
+}
+
+.btn-limpar:hover {
+    background-color: #b0bec5;
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+/* Requisito 7: Personalização visual do rodapé */
+footer {
+    background-color: #212121;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
