@@ -1,13 +1,10 @@
-# Minha primeira página Web
+# Minha página Web
 Nome: SANDRO MORETTI SIMÃO DO NASCIMENTO MENDES
 
 ## Sobre a atividade
-Esta é minha primeira página desenvolvida na disciplina Programação Web 1.
+Estilizações realizadas por meio do CSS.
 
-## Tecnologias utilizadas
-- HTML
-- Git
-- GitHub
+## Acesso às páginas
 
-## Evidência da Alteração nas DevTools
-![Print das DevTools](print-devtools.png)
+- [Página Inicial](https://sandro-msnm.github.io/Programacao-web-1/)
+- [Página Sobre Mim](https://sandro-msnm.github.io/Programacao-web-1/sobre.html)
