@@ -3,34 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Primeira Página Web</title>
-    <!-- Requisito 1: Vinculação da folha de estilos externa -->
+    <title>Sobre Mim - Página Pessoal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Requisito 2 & 7: Cabeçalho da página -->
     <header>
         <h1>Boas-vindas à minha página!</h1>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="sobre.html">Sobre mim</a>
-        </nav>
     </header>
 
-    <!-- Requisito 6: Conteúdo principal organizado -->
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre mim</a>
+    </nav>
+
     <main>
-        <!-- Requisito 3 & 4: Seção sobre mim e imagem pessoal -->
-        <section class="perfil-section">
-            <!-- Certifique-se de adicionar uma imagem válida em uma pasta local -->
-            <img src="img/foto.jpg" alt="Foto de Sandro Moretti" class="foto-pessoal">
-            <p>Este é um parágrafo de boas-vindas para a atividade de Programação web.</p>
-            <p class="destaque"><strong>Desenvolvido por:</strong> Sandro Moretti Simão do Nascimento Mendes</p>
+        <section>
+            <h2>Apresentação</h2>
+            <p>Este é um parágrafo de boas-vindas para a atividade de Programação Web.</p>
+            <!-- Caminho correto para buscar a imagem dentro da pasta img -->
+            <img src="img/foto.jpg" alt="Foto de Sandro Moretti" class="foto-perfil">
         </section>
 
-        <!-- Lista de interesses solicitada nos requisitos -->
-        <section class="interesses-section">
-            <h2>Meus Interesses</h2>
+        <section>
+            <h2>Meus Interesses Atuais</h2>
             <ul>
                 <li>Desenvolvimento Web</li>
                 <li>Design de Interfaces</li>
@@ -38,41 +34,45 @@
             </ul>
         </section>
 
-        <!-- Requisito 5: Formulário de contato estruturado -->
-        <section class="formulario-section">
+        <!-- Seção do Formulário com os requisitos da Atividade 2 -->
+        <section>
             <h2>Entre em contato</h2>
             <form action="#" method="POST">
-                <div class="campo-grupo">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
+                <fieldset>
+                    <legend>Formulário de Contato</legend>
 
-                <div class="campo-grupo">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
 
-                <div class="campo-grupo">
-                    <label for="assunto">Assunto:</label>
-                    <input type="text" id="assunto" name="assunto">
-                </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-                <div class="campo-grupo">
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="assunto">Assunto:</label>
+                        <input type="text" id="assunto" name="assunto" required>
+                    </div>
 
-                <div class="botoes">
-                    <button type="submit">Enviar</button>
-                    <button type="reset" class="btn-limpar">Limpar</button>
-                </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+                </fieldset>
             </form>
         </section>
     </main>
 
-    <!-- Requisito 7: Rodapé diferenciado -->
     <footer>
-        <p>&copy; 2026 - Sandro Moretti Mendes. Disciplina de Programação Web I - IF Sudeste MG.</p>
+        <p>**Desenvolvido por:** Sandro Moretti Simão do Nascimento Mendes</p>
+        <p>&copy; 2026 - Sandro Moretti Simão do Nascimento Mendes. Disciplina de Programação Web I - IF Sudeste MG.</p>
     </footer>
 
 </body>

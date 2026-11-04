@@ -1,175 +1,159 @@
-/* ==========================================================================
-   CONFIGURAÇÕES GERAIS E BOX MODEL
-   ========================================================================== */
-* {
-    box-sizing: border-box; /* Inclui padding e border nas dimensões totais */
+/* bloco do body, header e nav */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif; /* Requisito 3: Família de fontes */
-    color: #333333; /* Requisito 3: Cor do texto geral */
-    background-color: #f4f6f9;
-    line-height: 1.6;
-}
-
-main {
-    max-width: 800px;
-    margin: 20px auto; /* Espaçamento externo centralizado */
-    padding: 0 20px;   /* Espaçamento interno lateral */
-}
-
-/* ==========================================================================
-   CABEÇALHO, TÍTULOS E NAVEGAÇÃO
-   ========================================================================== */
 header {
-    background-color: #004d40; /* Requisito 2: Cor de fundo do cabeçalho */
-    color: #ffffff;            /* Requisito 2: Cor de texto do cabeçalho */
-    padding: 30px 20px;
+    background-color: #0f172a; /* Azul escuro */
+    color: #ffffff;            /* Texto branco */
     text-align: center;
+    padding: 2.5rem 1rem;
+    margin: 0;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-h2 {
-    color: #004d40; /* Requisito 2: Personalização dos subtítulos */
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #004d40;
-    padding-bottom: 5px;
-}
-
-/* Requisito 7: Links de navegação e pseudoclasse :hover */
 nav {
-    margin-top: 15px;
+    background-color: #1e293b; /* Azul médio */
+    text-align: center;
+    padding: 0.8rem;
+    margin: 0;
 }
 
 nav a {
-    color: #ffffff;
+    color: #f8fafc;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #80cbc4; /* Muda a cor quando o mouse passa por cima */
+    color: #38bdf8;
     text-decoration: underline;
 }
 
-/* ==========================================================================
-   CONTEÚDO, TEXTOS E IMAGENS
-   ========================================================================== */
-p {
-    margin-bottom: 15px;
+/* Estruturação das seções */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-ul {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-/* Requisito 3: Seletor de classe específico para destaque */
-.destaque {
-    background-color: #e0f2f1;
-    padding: 10px;
-    border-left: 5px solid #004d40;
-    font-style: italic;
-}
-
-/* Requisito 4: Dimensionamento e borda personalizada da imagem */
-.foto-pessoal {
-    width: 200px;         /* Define a largura fixa */
-    height: 200px;        /* Define a altura fixa */
-    object-fit: cover;    /* Mantém a proporção do rosto na foto */
-    border: 3px solid #004d40; /* Aplica borda customizada */
-    border-radius: 50%;   /* Transforma a imagem em um círculo perfeito */
-    display: block;
-    margin: 0 auto 20px auto; /* Centraliza a foto */
-}
-
-/* Requisito 6: Diferenciação visual de uma seção da página */
-.perfil-section, .interesses-section, .formulario-section {
+section {
     background-color: #ffffff;
-    padding: 25px;
-    margin-bottom: 25px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* ==========================================================================
-   FORMULÁRIO DE CONTATO
-   ========================================================================== */
-/* Requisito 5: Personalização dos campos e agrupamento */
-.campo-grupo {
-    margin-bottom: 15px;
+/* Estilização da imagem pessoal */
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 4px solid #1e293b;
+    border-radius: 50%; /* Imagem arredondada */
+    margin-top: 1rem;
 }
 
-.campo-grupo label {
-    display: block;
-    margin-bottom: 5px;
+/* Customização completa do formulário */
+fieldset {
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 1.5rem;
+}
+
+legend {
     font-weight: bold;
+    color: #1e293b;
+    padding: 0 0.5rem;
 }
 
-/* Requisito 5: Estilização de inputs e textareas usando padding, border e margin */
-input[type="text"],
-input[type="email"],
-textarea {
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border: 1px solid #cbd5e1;
     border-radius: 4px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: border-color 0.3s;
+    box-sizing: border-box;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: #004d40;
-    outline: none;
-}
-
-/* Estilização dos Botões */
-button {
-    background-color: #004d40;
-    color: white;
+/* Botões */
+.form-buttons button {
+    padding: 0.5rem 1.2rem;
     border: none;
-    padding: 12px 20px;
-    font-size: 1rem;
-    cursor: pointer;
     border-radius: 4px;
+    cursor: pointer;
     font-weight: bold;
     margin-right: 10px;
 }
 
-button:hover {
-    background-color: #00796b;
+button[type="submit"] {
+    background-color: #10b981;
+    color: white;
 }
 
-.btn-limpar {
-    background-color: #cfd8dc;
-    color: #37474f;
+button[type="reset"] {
+    background-color: #ef4444;
+    color: white;
 }
 
-.btn-limpar:hover {
-    background-color: #b0bec5;
-}
-
-/* ==========================================================================
-   RODAPÉ
-   ========================================================================== */
-/* Requisito 7: Personalização visual do rodapé */
+/* Rodapé */
 footer {
-    background-color: #212121;
-    color: #ffffff;
+    background-color: #0f172a;
+    color: #94a3b8;
     text-align: center;
-    padding: 20px;
+    padding: 1.5rem;
+    margin-top: 3rem;
     font-size: 0.9rem;
-    margin-top: 40px;
+}
+/* Efeito ao passar o mouse nos botões */
+.form-buttons button:hover {
+    filter: brightness(0.9); /* Escurece levemente o botão ao passar o mouse */
+    transform: translateY(-1px); /* Cria um efeito sutil de clique/flutuação */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+}
+
+/* Efeito quando o botão for clicado (pressionado) */
+.form-buttons button:active {
+    transform: translateY(1px); /* Retorna o botão para baixo ao clicar */
+    box-shadow: none;
+}
+
+/* Remove a margem superior da foto para alinhar perfeitamente */
+.foto-perfil {
+    margin-top: 0;
+}
+
+/* Centraliza a foto de perfil na página inicial */
+.foto-perfil {
+    display: block;
+    margin: 2rem auto 0 auto; /* Centraliza horizontalmente e adiciona espaço acima */
+}
+
+/* Configuração inicial da foto */
+.foto-perfil {
+    display: block;
+    margin: 2rem auto 0 auto;
+    filter: grayscale(100%); /* Deixa a foto em preto e branco */
+    transition: filter 0.4s ease;
+}
+
+/* Efeito ao passar o mouse */
+.foto-perfil:hover {
+    filter: grayscale(0%); /* Restaura as cores originais da foto */
+    cursor: pointer;
 }
